@@ -1,28 +1,32 @@
-@import url(./style.css);
+@import url(./reset.css);
 body {
     background-color: #ffffff;
     width: 100vw;
     height: 100vh;
+
 }
 
 /* HEADER INICIO */
 .header {
     display: flex;
     justify-content: space-between;
+    height: 56px;
+    max-width: 100vw;
+    padding: 0 25px 0 25px;
 }
 
 .header .logo {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 32px;
+    width: 33.33%;
 }
 
 .header .logo .lines {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 24px;
     justify-content: space-around;
 }
 
@@ -31,5 +35,72 @@ body {
     height: 2px;
     background-color: black;
     border-radius: 2px;
+  }
+
+  .header .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+  }
+
+  .header .input .input-container{
+    position: relative;
+    width: 400px; 
+    height: 40px;
+  }
+
+.header .input .input-container input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #CCCCCC;
+    height: 40px;
+    transition: border-color 0.3s;
+    border-radius: 20px;
+}
+
+.header .input .input-container input:focus {
+    border: 1px solid #747474 ;
+    outline: none; 
+}
+
+.header .input .input-container input:focus + .image-container {
+    border: 1px solid #747474 ;
+    outline: none; 
+}
+
+.header .input .image-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 57px;
+    height: 40px;
+    background-color: #F8F8F8;
+    border: 1px solid #CCCCCC;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .header .input .image-container img {
+    width: auto;
+    height: auto;
+  }
+
+  .header .notifications{
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
   }
 /* HEADER FIM */
